@@ -13,9 +13,9 @@
         }
 
         :root {
-            --primary-color: #2F4F4F; /* Azul Petróleo */
-            --accent-color: #D4AF37; /* Dourado Suave */
-            --text-color: #FFF8DC; /* Marfim */
+            --primary-color: #2F4F4F; 
+            --accent-color: #D4AF37; 
+            --text-color: #FFF8DC; 
             --card-bg: rgba(47, 79, 79, 0.9);
             --hover-accent: #FFD700;
         }
@@ -28,7 +28,6 @@
             overflow-x: hidden;
         }
 
-        /* Header */
         .header {
             position: fixed;
             top: 0;
@@ -158,7 +157,6 @@
             color: var(--hover-accent);
         }
 
-        /* Sections */
         .section {
             padding: 4rem 2rem;
             max-width: 1200px;
@@ -184,7 +182,6 @@
             background: var(--accent-color);
         }
 
-        /* Experience Cards */
         .experience-grid {
             display: grid;
             gap: 2rem;
@@ -356,7 +353,6 @@
             background: var(--hover-accent);
         }
 
-        /* Education */
         .education-timeline {
             position: relative;
             padding-left: 2rem;
@@ -412,7 +408,6 @@
             font-size: 0.9rem;
         }
 
-        /* Footer */
         .footer {
             background: var(--primary-color);
             text-align: center;
@@ -420,7 +415,6 @@
             border-top: 2px solid var(--accent-color);
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -445,12 +439,10 @@
             }
         }
 
-        /* Smooth scroll */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -468,7 +460,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <nav class="nav">
             <div class="logo">Sejam Bem Vindos ao Meu Portfólio!</div>
@@ -510,14 +501,13 @@
             </div>
 
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/antˆonio-victor" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/ant%C3%B4nio-victor/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/antoniovictoralvessilva" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://antoniovictoralvessilva.github.io/Portfolio/" target="_blank"><i class="fas fa-globe"></i></a>
+                <a href="https://www.instagram.com/antonio_victoralves/" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="section">
         <h2>Sobre Mim</h2>
         <div style="background: var(--card-bg); padding: 2rem; border-radius: 15px; border: 1px solid var(--accent-color); text-align: center; font-size: 1.1rem;">
@@ -525,7 +515,6 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="section">
         <h2>Experiência Profissional</h2>
         <div class="experience-grid">
@@ -573,8 +562,7 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
+<section id="skills" class="section">
         <h2>Habilidades Técnicas</h2>
         <div class="skills-grid">
             <div class="skill-category">
@@ -586,7 +574,6 @@
                         <span>R</span>
                     </div>
                     <div class="skill-level">
-                        <!-- AJUSTAR NÍVEIS DE 0 A 10 -->
                         <div class="skill-dot active"></div>
                         <div class="skill-dot active"></div>
                         <div class="skill-dot active"></div>
@@ -606,7 +593,25 @@
                         <span>Python</span>
                     </div>
                     <div class="skill-level">
-                        <!-- AJUSTAR NÍVEIS DE 0 A 10 -->
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <i class="fas fa-database"></i>
+                        <span>SQL</span>
+                    </div>
+                    <div class="skill-level">
                         <div class="skill-dot active"></div>
                         <div class="skill-dot active"></div>
                         <div class="skill-dot active"></div>
@@ -622,11 +627,170 @@
 
                 <div class="skill-item">
                     <div class="skill-name">
-                        <i class="fas fa-database"></i>
-                        <span>SQL</span>
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
                     </div>
                     <div class="skill-level">
-                        <!-- AJUSTAR NÍVEIS DE 0 A 10 -->
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-chart-bar"></i> Análise de Dados</h3>
+
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Power BI</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot "></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <i class="fas fa-file-excel"></i>
+                        <span>Excel</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-tools"></i> Ferramentas de Desenvolvimento</h3>
+
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <i class="fas fa-code"></i>
+                        <span>VS Code</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <i class="fas fa-server"></i>
+                        <span>XAMPP</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <i class="fas fa-database"></i>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="skill-level">
                         <div class="skill-dot active"></div>
                         <div class="skill-dot active"></div>
                         <div class="skill-dot active"></div>
@@ -642,47 +806,7 @@
             </div>
 
             <div class="skill-category">
-                <h3><i class="fas fa-chart-bar"></i> Ferramentas de Análise</h3>
-                
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <i class="fas fa-file-excel"></i>
-                        <span>Excel</span>
-                    </div>
-                    <div class="skill-level">
-                        <!-- AJUSTAR NÍVEIS DE 0 A 10 -->
-                        <div class="skill-dot active"></div>
-                        <div class="skill-dot active"></div>
-                        <div class="skill-dot active"></div>
-                        <div class="skill-dot active"></div>
-                        <div class="skill-dot active"></div>
-                        <div class="skill-dot active"></div>
-                        <div class="skill-dot active"></div>
-                        <div class="skill-dot active"></div>
-                        <div class="skill-dot active"></div>
-                        <div class="skill-dot"></div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <i class="fas fa-chart-pie"></i>
-                        <span>Power BI</span>
-                    </div>
-                    <div class="skill-level">
-                        <!-- AJUSTAR NÍVEIS DE 0 A 10 -->
-                        <div class="skill-dot active"></div>
-                        <div class="skill-dot active"></div>
-                        <div class="skill-dot active"></div>
-                        <div class="skill-dot active"></div>
-                        <div class="skill-dot active"></div>
-                        <div class="skill-dot active"></div>
-                        <div class="skill-dot active"></div>
-                        <div class="skill-dot"></div>
-                        <div class="skill-dot"></div>
-                        <div class="skill-dot"></div>
-                    </div>
-                </div>
+                <h3><i class="fas fa-file-alt"></i> Documentação</h3>
 
                 <div class="skill-item">
                     <div class="skill-name">
@@ -690,7 +814,9 @@
                         <span>LaTeX</span>
                     </div>
                     <div class="skill-level">
-                        <!-- AJUSTAR NÍVEIS DE 0 A 10 -->
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
                         <div class="skill-dot active"></div>
                         <div class="skill-dot active"></div>
                         <div class="skill-dot active"></div>
@@ -698,20 +824,54 @@
                         <div class="skill-dot active"></div>
                         <div class="skill-dot active"></div>
                         <div class="skill-dot"></div>
-                        <div class="skill-dot"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <i class="fab fa-markdown"></i>
+                        <span>R Markdown</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
                         <div class="skill-dot"></div>
                         <div class="skill-dot"></div>
                     </div>
                 </div>
+
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <i class="fas fa-book"></i>
+                        <span>Quarto</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot active"></div>
+                        <div class="skill-dot"></div>
+                        <div class="skill-dot"></div>
+                    </div>
+                </div>             
             </div>
+
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="section">
         <h2>Projetos em Destaque</h2>
         <div class="projects-grid">
-            <!-- PROJETO 1 - ADICIONAR MANUALMENTE -->
             <div class="project-card">
                 <div class="project-image">
                     <!-- ADICIONAR IMAGEM AQUI -->
@@ -732,7 +892,7 @@
                 </div>
             </div>
 
-            <!-- PROJETO 2 - ADICIONAR MANUALMENTE -->
+
             <div class="project-card">
                 <div class="project-image">
                     <!-- ADICIONAR IMAGEM AQUI -->
@@ -752,7 +912,6 @@
                 </div>
             </div>
 
-            <!-- PROJETO 3 - ADICIONAR MANUALMENTE -->
             <div class="project-card">
                 <div class="project-image">
                     <!-- ADICIONAR IMAGEM AQUI -->
@@ -774,7 +933,6 @@
         </div>
     </section>
 
-    <!-- Education Section -->
     <section id="education" class="section">
         <h2>Formação Acadêmica</h2>
         <div class="education-timeline">
@@ -807,7 +965,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2025 Antônio Victor Alves Silva. Todos os direitos reservados.</p>
         <p>Desenvolvido com <i class="fas fa-heart" style="color: var(--accent-color);"></i> usando HTML, CSS e JavaScript</p>
@@ -828,7 +985,6 @@
             });
         });
 
-        // Header background on scroll
         window.addEventListener('scroll', () => {
             const header = document.querySelector('.header');
             if (window.scrollY > 100) {
@@ -847,12 +1003,10 @@
             });
         }, observerOptions);
 
-        // Observe all cards and sections
         document.querySelectorAll('.experience-card, .project-card, .skill-category, .education-item').forEach(el => {
             observer.observe(el);
         });
 
-        // Mobile menu toggle (if needed in future)
         const createMobileMenu = () => {
             const nav = document.querySelector('.nav');
             const navLinks = document.querySelector('.nav-links');
@@ -880,11 +1034,9 @@
             }
         };
 
-        // Initialize mobile menu on load and resize
         window.addEventListener('load', createMobileMenu);
         window.addEventListener('resize', createMobileMenu);
 
-        // Add CSS for mobile menu
         const mobileMenuCSS = `
             @media (max-width: 768px) {
                 .nav-links.show-mobile {
@@ -905,7 +1057,6 @@
         style.textContent = mobileMenuCSS;
         document.head.appendChild(style);
 
-        // Typing effect for hero title (optional enhancement)
         const typeWriter = (element, text, speed = 100) => {
             let i = 0;
             element.innerHTML = '';
@@ -921,7 +1072,6 @@
             setTimeout(type, 1000); // Start after 1 second
         };
 
-        // Initialize typing effect on load
         window.addEventListener('load', () => {
             const heroTitle = document.querySelector('.hero h1');
             if (heroTitle) {
@@ -930,7 +1080,6 @@
             }
         });
 
-        // Skill dots animation on scroll
         const animateSkillDots = () => {
             const skillItems = document.querySelectorAll('.skill-item');
             
@@ -938,10 +1087,8 @@
                 const dots = item.querySelectorAll('.skill-dot');
                 const activeDots = item.querySelectorAll('.skill-dot.active');
                 
-                // Reset dots
                 dots.forEach(dot => dot.classList.remove('active'));
                 
-                // Animate active dots with delay
                 activeDots.forEach((dot, index) => {
                     setTimeout(() => {
                         dot.classList.add('active');
@@ -951,7 +1098,6 @@
         };
 
   
-        // Add hover effects for cards
         document.querySelectorAll('.experience-card, .project-card, .skill-category').forEach(card => {
             card.addEventListener('mouseenter', function() {
                 this.style.borderColor = '#FFD700';
@@ -962,7 +1108,6 @@
             });
         });
 
-        // Social links hover effects
         document.querySelectorAll('.social-links a').forEach(link => {
             link.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-5px) scale(1.1)';
