@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antônio Victor Alves Silva - Portfólio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="https://cdn-icons-png.freepik.com/256/3201/3201555.png" sizes="32x32" />
-    <link rel="icon" href="https://cdn-icons-png.freepik.com/256/3201/3201555.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="https://cdn-icons-png.freepik.com/256/3201/3201555.png" />
+    <link rel="icon" href="https://cdn-icons-png.freepik.com/256/12237/12237097.png" sizes="32x32" />
+    <link rel="icon" href="https://cdn-icons-png.freepik.com/256/12237/12237097.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.freepik.com/256/12237/12237097.png" />
     <style>
       * {
         margin: 0;
@@ -75,7 +75,6 @@
         color: var(--accent-color);
       }
 
-      /* Hero Section */
       .hero {
         min-height: 100vh;
         display: flex;
@@ -103,7 +102,6 @@
         justify-content: center;
         font-size: 4rem;
         color: var(--accent-color);
-        /* Espaço para adicionar foto posteriormente */
       }
 
       .hero h1 {
@@ -197,7 +195,6 @@
         padding: 2rem;
         border: 1px solid var(--accent-color);
       }
-
 
       .experience-header {
         display: flex;
@@ -296,7 +293,6 @@
         padding: 2rem;
         border: 1px solid var(--accent-color);
       }
-
 
       .project-image {
         width: 100%;
@@ -407,145 +403,137 @@
         border-top: 2px solid var(--accent-color);
       }
 
-/* Botão do menu mobile */
-.mobile-menu-btn {
-  display: none; /* será exibido via media query */
-  background: none;
-  border: none;
-  color: var(--accent-color);
-  font-size: 1.8rem;
-  cursor: pointer;
-  padding: 0.5rem;
-  z-index: 1001; /* acima do conteúdo, mas abaixo do menu */
-  transition: color 0.3s ease;
-}
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--accent-color);
+        font-size: 1.8rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 1001;
+        transition: color 0.3s ease;
+      }
 
-/* Media query para telas menores */
-@media (max-width: 768px) {
+      @media (max-width: 768px) {
+        .mobile-menu-btn {
+          display: block;
+        }
 
+        .mobile-menu-btn:hover {
+          color: var(--hover-accent);
+        }
 
-  .mobile-menu-btn {
-    display: block;
-  }
+        .nav {
+          position: relative;
+        }
 
-  .mobile-menu-btn:hover {
-    color: var(--hover-accent);
-  }
+        .nav-links {
+          display: none !important;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: rgba(47, 79, 79, 0.98);
+          backdrop-filter: blur(10px);
+          flex-direction: column;
+          padding: 1.5rem 2rem;
+          border-top: 2px solid var(--accent-color);
+          gap: 0;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+          z-index: 1002;
+        }
 
-  /* Menu mobile */
-  .nav {
-    position: relative; /* garante que o menu absoluto seja relativo ao nav */
-  }
+        .nav-links.show-mobile {
+          display: flex !important;
+          z-index: 9999;
+        }
 
-  .nav-links {
-  display: none !important; 
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: rgba(47, 79, 79, 0.98);
-    backdrop-filter: blur(10px);
-    flex-direction: column;
-    padding: 1.5rem 2rem;
-    border-top: 2px solid var(--accent-color);
-    gap: 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    z-index: 1002; /* acima do botão e outros elementos */
-  }
+        .nav-links li {
+          margin: 0;
+          border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
 
-.nav-links.show-mobile {
-  display: flex !important;
-  z-index: 9999; 
-}
+        .nav-links li:last-child {
+          border-bottom: none;
+        }
 
+        .nav-links a {
+          display: block;
+          padding: 1rem 0;
+          text-align: center;
+          font-size: 1.1rem;
+          font-weight: 500;
+          transition: all 0.3s ease;
+        }
 
-  .nav-links li {
-    margin: 0;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-  }
+        .nav-links a:hover {
+          background: rgba(212, 175, 55, 0.1);
+          color: var(--hover-accent);
+        }
 
-  .nav-links li:last-child {
-    border-bottom: none;
-  }
+        .logo {
+          font-size: 1.2rem;
+        }
 
-  .nav-links a {
-    display: block;
-    padding: 1rem 0;
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-  }
+        .hero h1 {
+          font-size: 2rem;
+        }
 
-  .nav-links a:hover {
-    background: rgba(212, 175, 55, 0.1);
-    color: var(--hover-accent);
-  }
+        .hero h2 {
+          font-size: 1.2rem;
+        }
 
-  .logo {
-    font-size: 1.2rem;
-  }
+        .contact-info {
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+        }
 
-  .hero h1 {
-    font-size: 2rem;
-  }
+        .section {
+          padding: 3rem 1rem;
+        }
+      }
 
-  .hero h2 {
-    font-size: 1.2rem;
-  }
+      html {
+        scroll-behavior: smooth;
+      }
 
-  .contact-info {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
 
-  .section {
-    padding: 3rem 1rem;
-  }
-}
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-/* Scroll suave */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Animação fadeInUp */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-on-scroll {
-  animation: fadeInUp 0.6s ease-out;
-}
-
+      .animate-on-scroll {
+        animation: fadeInUp 0.6s ease-out;
+      }
     </style>
   </head>
 
   <body>
-<header class="header">
-  <nav class="nav">
-    <div class="logo">Sejam Bem Vindos ao Meu Portfólio!</div>
-    <button class="mobile-menu-btn">
-      <i class="fas fa-bars"></i>
-    </button>
-    <ul class="nav-links">
-      <li><a href="#home">Início</a></li>
-      <li><a href="#about">Sobre</a></li>
-      <li><a href="#experience">Experiência</a></li>
-      <li><a href="#skills">Habilidades</a></li>
-      <li><a href="#projects">Projetos</a></li>
-      <li><a href="#education">Educação</a></li>
-    </ul>
-  </nav>
-</header>
+    <header class="header">
+      <nav class="nav">
+        <div class="logo">Sejam Bem Vindos ao Meu Portfólio!</div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#experience">Experiência</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#education">Educação</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <div style="height: 100px;"></div>
 
@@ -1109,32 +1097,27 @@ html {
           header.style.background = 'rgba(47, 79, 79, 0.95)';
         }
       });
-
-document.addEventListener('DOMContentLoaded', function() {
-  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-  const navLinks = document.querySelector('.nav-links');
-
-  console.log('Menu button:', mobileMenuBtn); // Adicione esta linha para debug
-  console.log('Nav links:', navLinks); // Adicione esta linha para debug
-
-  if (!mobileMenuBtn || !navLinks) {
-    console.log('Elementos não encontrados!'); // Adicione esta linha
-    return;
-  }
-
-  mobileMenuBtn.addEventListener('click', function() {
-    navLinks.classList.toggle('show-mobile');
-    const icon = this.querySelector('i');
-    icon.className = navLinks.classList.contains('show-mobile') ? 'fas fa-times' : 'fas fa-bars';
-  });
-
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', function() {
-      navLinks.classList.remove('show-mobile');
-      mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
-    });
-  });
-});
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        console.log('Menu button:', mobileMenuBtn); // Adicione esta linha para debug
+        console.log('Nav links:', navLinks); // Adicione esta linha para debug
+        if (!mobileMenuBtn || !navLinks) {
+          console.log('Elementos não encontrados!'); // Adicione esta linha
+          return;
+        }
+        mobileMenuBtn.addEventListener('click', function() {
+          navLinks.classList.toggle('show-mobile');
+          const icon = this.querySelector('i');
+          icon.className = navLinks.classList.contains('show-mobile') ? 'fas fa-times' : 'fas fa-bars';
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function() {
+            navLinks.classList.remove('show-mobile');
+            mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+          });
+        });
+      });
       const animateSkillDots = () => {
         const skillItems = document.querySelectorAll('.skill-item');
         skillItems.forEach(item => {
