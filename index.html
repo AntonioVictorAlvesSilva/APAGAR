@@ -407,30 +407,76 @@
         border-top: 2px solid var(--accent-color);
       }
 
-      @media (max-width: 768px) {
+/* Adicione estas regras CSS na seção @media (max-width: 768px) */
 
-        .nav-links {
-          display: flex;
-        }
+@media (max-width: 768px) {
+  /* Menu hambúrguer */
+  .mobile-menu-btn {
+    display: block !important;
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+  }
 
-        .hero h1 {
-          font-size: 2rem;
-        }
+  /* Esconder links normalmente */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(47, 79, 79, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 1rem 2rem;
+    border-top: 2px solid var(--accent-color);
+    gap: 1rem;
+  }
 
-        .hero h2 {
-          font-size: 1.2rem;
-        }
+  /* Mostrar menu quando ativo */
+  .nav-links.show-mobile {
+    display: flex !important;
+  }
 
-        .contact-info {
-          flex-direction: column;
-          align-items: center;
-          gap: 1rem;
-        }
+  /* Estilizar links no mobile */
+  .nav-links a {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    text-align: center;
+    font-size: 1.1rem;
+  }
 
-        .section {
-          padding: 3rem 1rem;
-        }
-      }
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  /* Ajustar navegação */
+  .nav {
+    position: relative;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+}
 
       html {
         scroll-behavior: smooth;
@@ -1066,25 +1112,7 @@
       };
       window.addEventListener('load', createMobileMenu);
       window.addEventListener('resize', createMobileMenu);
-      const mobileMenuCSS = `
-            @media (max-width: 768px) {
-                .nav-links.show-mobile {
-                    display: flex;
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                    right: 0;
-                    background: rgba(47, 79, 79, 0.98);
-                    flex-direction: column;
-                    padding: 1rem;
-                    border-top: 2px solid var(--accent-color);
-                }
-            }
-        `;
-      const style = document.createElement('style');
-      style.textContent = mobileMenuCSS;
-      document.head.appendChild(style);
-      const typeWriter = (element, text, speed = 100) => {
+            const typeWriter = (element, text, speed = 100) => {
         let i = 0;
         element.innerHTML = '';
         const type = () => {
