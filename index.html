@@ -1097,16 +1097,6 @@
           header.style.background = 'rgba(47, 79, 79, 0.95)';
         }
       });
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-on-scroll');
-          }
-        });
-      }, observerOptions);
-      document.querySelectorAll('.experience-card, .project-card, .skill-category, .education-item').forEach(el => {
-        observer.observe(el);
-      });
 
 document.addEventListener('DOMContentLoaded', function() {
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -1131,7 +1121,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
-        setTimeout(type, 1000); // Start after 1 second
       };
       window.addEventListener('load', () => {
         const heroTitle = document.querySelector('.hero h1');
