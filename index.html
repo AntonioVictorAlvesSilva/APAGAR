@@ -407,26 +407,38 @@
         border-top: 2px solid var(--accent-color);
       }
 
+/* Botão do menu mobile */
+.mobile-menu-btn {
+  display: none; /* será exibido via media query */
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001; /* acima do conteúdo, mas abaixo do menu */
+  transition: color 0.3s ease;
+}
 
+/* Media query para telas menores */
 @media (max-width: 768px) {
+
+
   .mobile-menu-btn {
-    display: block !important;
-    background: none;
-    border: none;
-    color: var(--accent-color);
-    font-size: 1.8rem;
-    cursor: pointer;
-    padding: 0.5rem;
-    z-index: 1001;
-    transition: color 0.3s ease;
+    display: block;
   }
 
   .mobile-menu-btn:hover {
     color: var(--hover-accent);
   }
 
+  /* Menu mobile */
+  .nav {
+    position: relative; /* garante que o menu absoluto seja relativo ao nav */
+  }
+
   .nav-links {
-    display: none;
+  display: none !important; 
     position: absolute;
     top: 100%;
     left: 0;
@@ -438,11 +450,14 @@
     border-top: 2px solid var(--accent-color);
     gap: 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1002; /* acima do botão e outros elementos */
   }
 
-  .nav-links.show-mobile {
-    display: flex !important;
-  }
+.nav-links.show-mobile {
+  display: flex !important;
+  z-index: 9999; 
+}
+
 
   .nav-links li {
     margin: 0;
@@ -465,11 +480,6 @@
   .nav-links a:hover {
     background: rgba(212, 175, 55, 0.1);
     color: var(--hover-accent);
-  }
-
-  .nav {
-    position: relative;
-    padding: 0 1rem;
   }
 
   .logo {
@@ -495,25 +505,27 @@
   }
 }
 
-      html {
-        scroll-behavior: smooth;
-      }
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
 
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
+/* Animação fadeInUp */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+.animate-on-scroll {
+  animation: fadeInUp 0.6s ease-out;
+}
 
-      .animate-on-scroll {
-        animation: fadeInUp 0.6s ease-out;
-      }
     </style>
   </head>
 
@@ -521,7 +533,7 @@
 <header class="header">
   <nav class="nav">
     <div class="logo">Sejam Bem Vindos ao Meu Portfólio!</div>
-    <button class="mobile-menu-btn" style="display: none;">
+    <button class="mobile-menu-btn">
       <i class="fas fa-bars"></i>
     </button>
     <ul class="nav-links">
@@ -1102,33 +1114,27 @@ document.addEventListener('DOMContentLoaded', function() {
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const navLinks = document.querySelector('.nav-links');
 
-  if (mobileMenuBtn && navLinks) {
-    mobileMenuBtn.addEventListener('click', function() {
-      navLinks.classList.toggle('show-mobile');
-      const icon = this.querySelector('i');
-      if (navLinks.classList.contains('show-mobile')) {
-        icon.className = 'fas fa-times';
-      } else {
-        icon.className = 'fas fa-bars';
-      }
-    });
-    const menuLinks = navLinks.querySelectorAll('a');
-    menuLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        navLinks.classList.remove('show-mobile');
-        mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
-      });
-    });
+  console.log('Menu button:', mobileMenuBtn); // Adicione esta linha para debug
+  console.log('Nav links:', navLinks); // Adicione esta linha para debug
+
+  if (!mobileMenuBtn || !navLinks) {
+    console.log('Elementos não encontrados!'); // Adicione esta linha
+    return;
   }
+
+  mobileMenuBtn.addEventListener('click', function() {
+    navLinks.classList.toggle('show-mobile');
+    const icon = this.querySelector('i');
+    icon.className = navLinks.classList.contains('show-mobile') ? 'fas fa-times' : 'fas fa-bars';
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function() {
+      navLinks.classList.remove('show-mobile');
+      mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+    });
+  });
 });
-      };
-      window.addEventListener('load', () => {
-        const heroTitle = document.querySelector('.hero h1');
-        if (heroTitle) {
-          const originalText = heroTitle.textContent;
-          typeWriter(heroTitle, originalText, 80);
-        }
-      });
       const animateSkillDots = () => {
         const skillItems = document.querySelectorAll('.skill-item');
         skillItems.forEach(item => {
